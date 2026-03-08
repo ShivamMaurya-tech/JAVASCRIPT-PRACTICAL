@@ -1,0 +1,1 @@
+# This is javascript practical sheet via learning from scratch
