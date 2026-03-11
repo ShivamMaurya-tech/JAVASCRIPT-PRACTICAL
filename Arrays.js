@@ -118,10 +118,132 @@
 // 1.indexOf
 // syntax:-
 // indexOf(searchelement,fromIndex)
-let numbers=[1,2,3,4,5,6,7,8,9,9];
-// console.log(numbers.indexOf(4,5)); //output -1
-// console.log(numbers);
-console.log(numbers.indexOf(9,9)); //output-8
+// let numbers=[1,2,4,3,4,5,6,7,8,9,9];
+// // console.log(numbers.indexOf(4,5)); //output -1
+// // console.log(numbers);
+// console.log(numbers.indexOf(3,9)); //output-1
 
-console.log(numbers.lastIndexOf(9));// output -9
+// console.log(numbers.lastIndexOf(4,3));// output -9
+// console.log(numbers.includes(6));// output true
 
+//using splice method--->
+// Q--->1.add december to end of an Array.
+// 2.what is the return value of splice method .
+// 3.update march to March.
+//4.delete june from an array
+
+// let Months=["january","february","march","april"];
+// Months.push("december");
+// console.log(Months);
+// console.log(Months.indexOf("march"));
+
+
+// (Months.splice(Months.length,0,"december"));//same console.log(4,0,"december");
+// console.log(Months);
+// console.log(Months.length);
+// console.log(Months.splice(2,1,"March"));
+// console.log(Months);
+
+// let Months=["january","february","june","march","april"];
+// Months.splice(Months.length,0,"december");
+// // console.log(Months);
+
+// const updatemarch=(Months.indexOf("june"));//here element at 2 must be delete "june"
+// Months.splice(updatemarch,2,"March");
+// console.log(Months);
+
+//-------------------------------> 
+// filter in an Array
+// 1.find 
+// syntax->array.find(curelement,index,array) just like map method
+
+// let numbers=[1,2,3,4,5,6,7];
+// const result=numbers.find((curelement)=>{
+// return curelement>5;
+// });
+// console.log(result);//-output 6 just after 5 
+
+// const mynumber=numbers.map((curelement)=>{
+//     return curelement *4;
+// });
+// console.log(mynumber);//output-multiplication of 4
+
+// 2.findIndex method
+
+// const num1=mynumber.findIndex((curelement)=>{
+//     return curelement>15;
+// });
+// console.log(num1);//-output-3
+
+//3.filter method
+
+// const number=numbers.filter((curelement)=>{
+// return curelement>4;
+// });
+// console.log(number);//-output-[5,6,7]
+
+// ---->Qustion - delete 6 from an array
+// let value=6;
+// const mynumber=numbers.filter((curelement)=>{
+//     return curelement!=6;
+// });
+// console.log(mynumber);
+
+
+//important question -->
+// given an array of products where each product has a name and a price ,write a function 
+// that uses the filter method to 
+// return an array containing only
+//  the products with a less than or equal  to 500
+// const products=[
+    
+//        { name:"Laptop",price:1200},
+//        {name:"Phone",price:800},
+//        {name:"Tablets",price:500},
+//        {name:"Smartwatch",price:150}
+
+    
+// ];
+// // for (var item in products){
+// //     console.log(item);
+// // } 
+
+// const myproduct=products.filter((curelement)=>{
+//     return (curelement.price<=500);
+// });
+// console.log(myproduct);//output-{name:"Tablets",price:500} //  {name:"Smartwatch",price:150}
+
+
+// -------------->filter unique value
+// let numbers=[1,2,3,4,7,5,6,7];
+// // const mynumbers=numbers.filter((curelement,index,array)=>{
+// // // console.log(index);
+// // // console.log(curelement);
+// // // console.log(array.indexOf(curelement)) //note --> returning the first  come element of an index which means 7 have index 4 twice.
+// // return array.indexOf(curelement)==index;
+// // });
+// // console.log(mynumbers);
+
+// //new set for unique element of an array
+// // console.log(new Set(numbers));//output Set(7) { 1, 2, 3, 4, 7, 5, 6 }
+// console.log([...new Set(numbers)]); //note for(... these dot represent let numbers: number[])
+
+
+
+//--------------------> Sorted array 
+// let numbers=[1,2,4,2,1,23,5];
+// // numbers.sort(); does not sort for bigger numbers
+// const mynumber=numbers.sort((a,b)=>{
+// //     if(a>b) return 1;
+// //     else return -1;
+// // });
+// // if(a>b) return 1; //switch the order 
+// // if(b>a) return -1; // keep the order
+// // {------->top part used in ascending order}
+// // console.log(mynumber);
+
+// //----> used in descending order
+//  if(a>b) return -1;
+//     else return 1;
+// });
+// console.log(mynumber);
