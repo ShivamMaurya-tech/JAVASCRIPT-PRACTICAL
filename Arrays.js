@@ -118,7 +118,7 @@
 // 1.indexOf
 // syntax:-
 // indexOf(searchelement,fromIndex)
-// let numbers=[1,2,4,3,4,5,6,7,8,9,9];
+// let numbers=[4,2,1,3,78,5,6,7,8,9,9];
 // // console.log(numbers.indexOf(4,5)); //output -1
 // // console.log(numbers);
 // console.log(numbers.indexOf(3,9)); //output-1
@@ -247,3 +247,41 @@
 //     else return 1;
 // });
 // console.log(mynumber);
+
+// --------------------------> Question of map method 
+//1.Using map method,write a function that takes an array of 
+// Strings and return a new arraymwhere each string is captalised .
+// let Strings=["hello","ram","how"];
+// const result=Strings.map((curelement,index,array)=>{
+// return curelement.toUpperCase();//`${curelement}`;
+// });
+// console.log(result);
+
+
+// 2.using the map method write a function that takes 
+// an array of numbers and returns a new array where
+//each number is squared but only if it is even number.
+
+// let numbers=[1,2,3,4,5,6];
+// const result =numbers.map((curelement)=>{
+//     if(curelement%2==0){
+//     return (curelement*curelement);
+//     }
+// })
+// .filter((curelement) => curelement!=undefined);
+// console.log(result);
+
+//3.using the map method write a function that takes an array  of names and returns 
+// a new array where each name is prefixed with 'Mr'.
+// let names=["Abhay","Shivam","Deva"];
+// const result=names.map((curelement,index)=>{
+//     return `Mr ${curelement}`;
+// });
+// console.log(result);
+
+
+
+//------------------------------------>Reduce method 
+// (accumulate answer of large data using in total of add to cart part in e-commerce site)
+//syntax:-
+//array.reduce(function callback(accumulator,currentValue ,index,array))
