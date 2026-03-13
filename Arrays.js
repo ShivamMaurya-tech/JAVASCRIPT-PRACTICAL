@@ -119,11 +119,11 @@
 // syntax:-
 // indexOf(searchelement,fromIndex)
 // let numbers=[4,2,1,3,78,5,6,7,8,9,9];
-// // console.log(numbers.indexOf(4,5)); //output -1
+// console.log(numbers.indexOf(4,5)); //output -1
 // // console.log(numbers);
-// console.log(numbers.indexOf(3,9)); //output-1
+// console.log(numbers.lastIndexOf(4,5)); //output 0
 
-// console.log(numbers.lastIndexOf(4,3));// output -9
+// console.log(numbers.lastIndexOf(4,3));// output 0
 // console.log(numbers.includes(6));// output true
 
 //using splice method--->
@@ -284,4 +284,15 @@
 //------------------------------------>Reduce method 
 // (accumulate answer of large data using in total of add to cart part in e-commerce site)
 //syntax:-
-//array.reduce(function callback(accumulator,currentValue ,index,array))
+//array.reduce(function callback(accumulator,currentValue ,index,array)=>{
+    //},initialValues)
+
+
+    //Interview question -> write a javascript function that calculates the total price of items 
+    //in a shoppingcart, the function should take an array of item prices  as input
+    // and return the price total 
+// const priceItems=[200,400,500,100];
+// const result=priceItems.reduce((accumulator,curelement,index,array)=>{
+// return accumulator+curelement;//accumulator//`${accumulator}`;
+// },0);
+// console.log(result);
