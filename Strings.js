@@ -4,9 +4,9 @@
 // let text='Hello My name is \"Shivam Maurya\" I am a \'fullstack\' developer';
 // console.log(text);
 
-// 2. indexOf Method
+// // 2. indexOf Method
 // let names="Shivam Maurya";
-// const result=names.indexOf("Shivm");//output-first element value index(5)
+// const result=names.indexOf("Shivam");//output-first element value index(0)
 // console.log(result);
 
 
@@ -23,9 +23,9 @@
 
 // 4.lastIndexOf(searchelement,position) same as indexOf
 
-// let description="Hello My name is Shivam Maurya";
-// const myarr=description.lastIndexOf("My",2);
-// const myArr=description.indexOf("My",2);
+// let description="Hello Myname is Shivam Maurya";
+// const myarr=description.lastIndexOf("o",2);
+// const myArr=description.indexOf("Shivam",2);
 //     console.log(myArr);
 // console.log(myarr);
 
@@ -52,12 +52,12 @@
 
 // let description="Hello My name is Shivam Maurya Shivam";
 // const result =description.matchAll("Shivam");
-// // console.log(...result);
-//  //    or (...)-->spread opertator
-//  for(var items of result)
-// //  {console.log(items);}
-// //  console.log(items.index);
-// {console.log(items[0]);}
+// console.log(...result);
+// //  //    or (...)-->spread opertator
+// //  for(var items of result)
+// // //  {console.log(items);}
+// // //  console.log(items.index);
+// // {console.log(items[0]);}
 
 
 //8.includes() method returns boolean value and every character must be present
@@ -69,7 +69,7 @@
 
 // let description="Hello My name is Shivam Maurya Shivam";
 // const result=description.startsWith("Hello");
-// const lastresult=description.endsWith("Shivam");
+// const lastresult=description.endsWith("ram");
 // console.log(result);
 // console.log(lastresult);
 
@@ -84,7 +84,7 @@
 //which is slice gives output at negative index but substring returns whole strings,
 // let description="Hello My name is Shivam Maurya Shivam";
 // // const result=description.substring(3,8);//-output (lo My)
-//  const result=description.substring(-6);//------------>returns whole strings
+//  const result=description.substring(-4);//------------>returns whole strings
 //  const res=description.slice(-6);//--------->returns only particular index value
 // console.log(result);
 // console.log(res);
@@ -102,3 +102,20 @@
 // // const result=description.replace("Shivam","Don");
 // const result=description.replaceAll("Shivam","Don");
 // console.log(result);
+
+
+// ------------------------> extractin string character
+//when using negative value in charAt(-2) there will be no/empty output
+// let text="Hello my Name is Shivam Maurya";
+// const result=text.at(-4);//return value for ngeative index also
+// const result1=text.charAt(7);//does not return value for negative 
+// const result2 =text.charCodeAt("hello"); //charcode means ascii code
+// console.log(result);
+// console.log(result1);
+// console.log(result2);
+
+
+let names="Hello Javascript ,How are you Javascript";
+const result1=names.lastIndexOf(-1);
+// const result=result1.replace(/javascript/i,"Shivam");
+console.log(result1);
