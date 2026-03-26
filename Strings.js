@@ -152,3 +152,77 @@
 // const result2 =Fruits.split(",").reverse().join();//Array String converted into as simple String
 // console.log(result2);
 
+// 1.-------------------> Question - write a javascript function that prints the letters  "a" through 
+// "z in the console. you should use a loop to iterate through the letters and print each one on a new line"
+
+// let letter="a";
+// while(letter.charCodeAt()<=122){
+
+//     console.log(letter);
+//     letter = String.fromCharCode(letter.charCodeAt() + 1);
+// }
+
+// const printAlphabet = () => {
+//   for (let code = 97; code <= 122; code++) {
+//     console.log(String.fromCharCode(code));
+//   }
+// };
+
+// printAlphabet();
+
+//2.Question -write a function to count the number of vowels in a string .
+// const countVowels =((str)=> {
+//     // Define vowels
+//     const vowels = "aeiouAEIOU";
+//     let count = 0;
+
+//     // Loop through each character in the string
+//     for (let char of str) {
+//         if (vowels.includes(char)) {
+//             count++;
+//         }
+//     }
+
+//     return count;
+// }
+// )
+// // Example usage:
+// console.log(countVowels("Hello"));     // Output: 2
+// console.log(countVowels("Programming")); // Output: 3
+// console.log(countVowels("Sky"));        // Output: 0
+
+//3.Question - write a function to check if all the vowels  presents in a string or not?
+// const present = (str) => {
+//     const vowels = "aeiou";
+//     str = str.toLowerCase();
+
+//     for (let v of vowels) {
+//         if (!str.includes(v)) {
+//             return "All vowels are not present";
+//         }
+//     }
+//     return "All vowels are present";
+// };
+
+// console.log(present("hello world"));          // All vowels are not present
+// console.log(present("education is powerful")); // All vowels are present
+
+
+
+// 4.Question -write a program using function for pangram present in a string or not
+// PANGRAM STATES :-Containing All letters of alphabets[(26) letters must present in a string]
+const letter=(str)=>{
+    str=str.toUpperCase();//convert string into lowercase because we are checking for small letters
+    
+    for(let i=65;i<=90;i++){
+        
+        if(!str.includes(String.fromCharCode(i))){
+        return "Pangram is  not Present ";
+    }
+}
+    return "Pangram is  present";
+
+};
+console.log(letter("My name is Shivam Maurya doing btech from computer science branch"));
+
+
