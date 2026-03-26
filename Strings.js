@@ -115,7 +115,40 @@
 // console.log(result2);
 
 
-let names="Hello Javascript ,How are you Javascript";
-const result1=names.lastIndexOf(-1);
-// const result=result1.replace(/javascript/i,"Shivam");
-console.log(result1);
+// --------------------> Question - Write a program for replace last "Javascript" with the another string
+// let names = "Hello Javascript ,How are you Javascript";
+
+// // Find the last occurrence of "Javascript"
+// const lastIndex = names.lastIndexOf("Javascript");
+//  const result ="Javascript".length;
+// console.log(result);//Output-10
+// // if (lastIndex !== -1) {
+// //   // Replace only the last occurrence
+// //   const result =
+// //     names.substring(0, lastIndex) +
+// //     "Shivam" +
+// //     names.substring(lastIndex + "Javascript".length);
+
+// //   console.log(result);
+// // } else {
+// //   console.log("Word not found");
+// }
+
+
+// 1.trim() method removes whitespace from start and end not from between
+// let str="    Hello, World!   ";
+// console.log(str.length);
+// const result=str.trim();
+// console.log(result);
+// console.log(result.length);
+
+//2.split () method split the array & reverse() method reverse the array and join method convert the array into string 
+// let Fruits="Apple ,Banana, Guava";//considered as one String because it is inside only one brackets
+// console.log(Fruits); //Printed as String 
+// const result=Fruits.split(","); //String converted into Array String
+// console.log(result);
+// const result1=Fruits.split(",").reverse();//Array String reverse
+// console.log(result1);
+// const result2 =Fruits.split(",").reverse().join();//Array String converted into as simple String
+// console.log(result2);
+
