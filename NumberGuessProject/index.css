@@ -1,0 +1,35 @@
+.container{
+    border: 2px solid black;
+    height:fit-content;
+    width: fit-content;
+    background-color: aquamarine;
+    
+}
+.guess{
+    text-align: center;
+    color:rebeccapurple;
+}
+.trytext{
+    color: rgb(188, 14, 14);
+
+}
+.Guesstext{
+    color: green;
+}
+.inputbox{
+    border: 2px solid black;
+}
+.submitbox{
+    border: 2px solid black;
+    color: rgb(239, 230, 230);
+    background-color:rgb(0, 102, 255);
+}
+.previoustext{
+    color: rgb(228, 10, 166);
+}
+.Remainingtext{
+    color: rgb(255, 98, 80);
+}
+.Right{
+    color: crimson;
+}
