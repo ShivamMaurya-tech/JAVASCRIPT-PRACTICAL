@@ -211,18 +211,64 @@
 
 // 4.Question -write a program using function for pangram present in a string or not
 // PANGRAM STATES :-Containing All letters of alphabets[(26) letters must present in a string]
-const letter=(str)=>{
-    str=str.toUpperCase();//convert string into lowercase because we are checking for small letters
+// const letter=(str)=>{
+//     str=str.toUpperCase();//convert string into lowercase because we are checking for small letters
     
-    for(let i=65;i<=90;i++){
+//     for(let i=65;i<=90;i++){
         
-        if(!str.includes(String.fromCharCode(i))){
-        return "Pangram is  not Present ";
-    }
-}
-    return "Pangram is  present";
+//         if(!str.includes(String.fromCharCode(i))){
+//         return "Pangram is  not Present ";
+//     }
+// }
+//     return "Pangram is  present";
 
-};
-console.log(letter("My name is Shivam Maurya doing btech from computer science branch"));
+// };
+// console.log(letter("My name is Shivam Maurya doing btech from computer science branch"));
 
 
+
+// --------------------> Math Object in javascript
+// 1. Constants // 2.Basic Operation
+// const pi=Math.PI;
+// console.log(pi);//3.141592653589793
+// console.log(Math.round(pi));//3
+// console.log(Math.ceil(pi));//4
+// console.log(Math.floor(pi));//3
+// console.log(Math.floor(-3.2)); output -(-4) lowest value always
+
+//2.----> Math.abs() method explains that how far from 0(Zero) to that number 
+// const number=Math.abs(5);
+// console.log(number);//output-5
+// const number1=Math.abs(-2.4);
+// console.log(number1);
+
+// //3.Math.trun() method returns the integer part only
+// const truncate=Math.trunc(0.7);
+// console.log(truncate);
+// const number=Math.trunc(-1.2);
+// console.log(number);
+
+
+// 4.Exponential part 
+// *--> pow(par1,par2) explain power
+// const number=Math.pow(2,3);
+// console.log(number);
+
+// //5.Square root Method
+// const number=Math.sqrt (9);
+// console.log(number); 
+
+//6.Logarithmic method 
+// const logarithm=Math.log(1); //returns natural log of number
+// console.log(logarithm);
+
+// const number=Math.log2(10); //return the base 2 logarithm of number
+// console.log(number);
+
+
+// const number1=Math.log10(10);
+// console.log(number1);
+
+//7.generate random number number lies between 0 (inclusive ) and 1(exclusive)
+// console.log(Math.round(Math.random()*100));
+// console.log((Math.random()*100).toFixed(3));
