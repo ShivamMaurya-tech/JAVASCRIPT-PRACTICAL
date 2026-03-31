@@ -13,6 +13,7 @@
         <li>2.node</li>
         <li>3.node</li>
         <li>4.node</li>
+        <li style="display:none;">5.node</li>
     </ul>
     <h1>DOM API 2</h1>
     <input type="text" >
@@ -32,11 +33,35 @@
         let findelementclassbyname=document.getElementsByClassName('classofnodes');
         console.log(findelementclassbyname);
         console.log(...findelementclassbyname);
+        for(let elem of findelementclassbyname){
+            console.log(elem.innerHTML);
+            console.log(elem.innerText);
+           
+            console.log(elem.textContent);
+        }
+
+
+        const findtagname=document.getElementsByTagName('li');
+        console.log(findtagname);
+        for(let elem of findtagname){
+            console.log(elem);
+        }
+
+
+        let queryselector=document.querySelector('#heading');
+        console.log(queryselector.innerHTML="SHIVAM MAURYA");
+
+        let tagqueryselector=document.querySelector('li');//only one li tag
+        let tagqueryselector1=document.querySelectorAll('li');//only one li tag
+        console.log(tagqueryselector1);
+
+
+       // tagqueryselector.forEach((curelement)=>console.log(curelement))
     </script>
 </body>
 </html>
 
 <!-- 
-//1.innerhtml ,innertext and textcontent these are the same
+//1.innerhtml(with tag) ,innertext(without tag but display:none style works not visible that part) and textcontent(without tag only content) these are the same
 //2.used to show inner value of html tag
 //3.html collection we get via classname -->
