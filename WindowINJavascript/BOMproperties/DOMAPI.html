@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <h1 id="heading">DOM API 1</h1>
+    <ul class="classofnodes">
+        <li>1.node</li>
+        <li>2.node</li>
+        <li>3.node</li>
+        <li>4.node</li>
+    </ul>
+    <h1>DOM API 2</h1>
+    <input type="text" >
+    <button>click me</button>
+    <div class="value"></div>
+    </div>
+    <script>
+
+        let findelementbyid=document.getElementById('heading');
+        console.log(findelementbyid);
+        console.log(findelementbyid.innerHTML);
+        
+        console.log(findelementbyid.innerText);
+        console.log(findelementbyid.textContent);
+
+
+        let findelementclassbyname=document.getElementsByClassName('classofnodes');
+        console.log(findelementclassbyname);
+        console.log(...findelementclassbyname);
+    </script>
+</body>
+</html>
+
+<!-- 
+//1.innerhtml ,innertext and textcontent these are the same
+//2.used to show inner value of html tag
+//3.html collection we get via classname -->

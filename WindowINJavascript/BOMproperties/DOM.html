@@ -6,10 +6,28 @@
     <title>Document</title>
 </head>
 <body>
-   
+   <h1>hello</h1>
     <script> 
-        let parent=document;
-    console.log(parent);
+        // let parent=document; -->
+    let bodyElement=document.body
+ // let headElement=document.head
+ //  console.log(bodyElement);
+  // console.log(headElement);
+   //console.log(headElement);
+   let childNodes=bodyElement.childNodes;
+   console.log(childNodes);
+   let childNodes2=bodyElement.children;
+   
+   console.log(childNodes2);
+
+   let firstnode=bodyElement.firstChild;
+   console.log(firstnode);
+   let firstElementnode=bodyElement.firstElementChild;
+   console.log(firstElementnode);
+   let secondnode=bodyElement.lastChild;
+   
+   console.log(secondnode);
+
 </script>
 </body>
 </html>
