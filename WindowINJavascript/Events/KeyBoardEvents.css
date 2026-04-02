@@ -1,0 +1,9 @@
+#myinput{
+    border: 2px solid black;
+    border-radius: 2rem;
+    height: 30px;
+    
+}
+.output{
+    border: 2px solid black;
+}

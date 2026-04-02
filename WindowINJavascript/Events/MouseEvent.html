@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="MouseEvents.css">
 </head>
 <body>
     <section>
@@ -11,26 +12,65 @@
     <button id="mybutton">click me</button>
 </section>
 <script>
-    let mybutton=document.querySelector('#mybutton');
     let rectdiv=document.querySelector('.rectangle');
-    const handleMouseEvents=()=>{
+    let mybutton=document.querySelector('#mybutton');
+    
+    const handleMouseEvents1=()=>{
         console.log("click");
-        rectdiv.style.backgroundcolor="#f5ee62";
+        rectdiv.style.backgroundcolor="#f5ee62"
     };
 
 
     const handleMouseEvents2=()=>{
         console.log('dblclick');
+        rectdiv.classList.add("addTransition2");
+
+    }
+
+
+    
+ 
+    const handleMouseEvents3=()=>{
+        console.log("addtransition3")
+        rectdiv.classList.add("addTransition3");
 
 
 
     }
 
+    const handleMouseEvents4=()=>{
+    console.log("addtransition4")
+        rectdiv.classList.add("addTransition4");
 
-    rectdiv.addEventListener('mouseover',handleMouseEvents3);
-    rectdiv.addEventListener('mouseout',handleMouseEvents4);
-    rectdiv.addEventListener('mousedown',handleMouseEvents5);
-    rectdiv.addEventListener('mouseup',handleMouseEvents6);
+
+
+    } 
+
+    const handleMouseEvents5=()=>{
+    console.log("addtransition5")
+        rectdiv.classList.add("addTransition5");
+
+
+
+    } 
+    const handleMouseEvents6=()=>{
+    console.log("addtransition6")
+        rectdiv.classList.add("addTransition6");
+
+
+
+    } 
+   
+    mybutton.addEventListener('click',handleMouseEvents1);
+    mybutton.addEventListener('dblclick',handleMouseEvents2);
+    
+   
+
+
+     rectdiv.addEventListener('mouseout',handleMouseEvents4);
+     rectdiv.addEventListener('mousedown',handleMouseEvents5);
+   // rectdiv.addEventListener('mouseup',handleMouseEvents5);
+     rectdiv.addEventListener('mouseover',handleMouseEvents3);
 </script>
 </body>
 </html>
