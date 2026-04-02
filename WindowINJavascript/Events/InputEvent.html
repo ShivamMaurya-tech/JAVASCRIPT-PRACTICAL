@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="InputEvent.css">
+</head>
+<body>
+    <section>
+    <input type="text" placeholder="type something.." autocomplete="off" id="myinput" name="username">
+    <div class="output">
+        <p class="inputvalue">InputValue:</p>
+        <p class="inputname">InputName:</p>
+        <p class="inputtype">InputType:</p>
+        <p class="eventtype">EventType:</p>
+    </div>
+    </section>
+    <script>
+        let myInput=document.querySelector("#myinput");
+        let InputValue=document.querySelector(".inputvalue")
+        let InputName=document.querySelector(".inputname");
+        let InputType=document.querySelector(".inputtype");
+        let EventType=document.querySelector(".eventtype");
+        const handlesinputpress=(event)=>{
+
+            //console.log(event);
+            //console.log("InputValue:",event.target.value);
+            //console.log("InputName:",event.target.name);
+            //console.log("InputType:",event.inputType);
+            //console.log("EventType:",event.type);
+           InputValue.textContent=`InputValue:${event.target.value}`;
+            InputName.textContent=`InputName:${event.target.name}`;
+            InputType.textContent=`InputType:${event.inputType}`;
+            EventType.textContent=`EventType:${event.type}`;
+        
+        
+        }
+        //myInput.addEventListener("input",handlesinputpress);
+        myInput.addEventListener("change",handlesinputpress);//change eventlistner applies when we go to outside the field
+    </script>
+</body>
+</html>

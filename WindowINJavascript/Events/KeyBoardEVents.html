@@ -9,15 +9,36 @@
 <body>
     <input type="text" id="myinput" placeholder="typeSomething">
     <div class="output">
-        <p class="keypressed">KeyPressed:</p>
+        <p class="keypressed">keypressed:</p>
         <p class="keycode">keycode:</p>
         <p class="charcode">CharcodeAt:</p>
         <p class="eventtype">EventType:</p>
     </div>
 <script>
+    let myinput=document.querySelector("#myinput");
+    let keypressed=document.querySelector('.keypressed');
+    let codekey=document.querySelector('.keycode');
+    let codechar=document.querySelector('.charcode');
+    let typeevent=document.querySelector('.eventtype')
 const handleKeypress=(event)=>{
-console.log(event);
+//console.log(event);
+
+//console.log("keypressed", event.key);
+
+//console.log("keycode",event.code);
+//console.log("charcode",event.type);
+
+
+
+ keypressed.textContent =`keypressed:${event.key}`;
+ codekey.textContent=`keycode:${event.code}`;
+ codechar.textContent=`CharcodAt:${event.key.charCodeAt(0)}`;
+ typeevent.textContent=`EventType:${event.type}`
+
+
 }
+//myinput.addEventListener('keydown',handleKeypress);
+myinput.addEventListener('keyup',handleKeypress);
 
 </script>
 </body>
