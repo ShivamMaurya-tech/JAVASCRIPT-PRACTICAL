@@ -11,15 +11,7 @@
     color: white;
 
 }
-.container{
-   
-    height: 200px;
-    width: 500px;
-    align-items: center;
-    padding: 20px;
-    margin-left: 50%;
-    margin-top: 10%;
-}
+
 .copycode{
     border: 2px solid white;
     height: fit-content;
