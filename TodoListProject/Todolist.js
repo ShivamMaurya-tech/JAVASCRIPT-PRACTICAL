@@ -1,64 +1,73 @@
-let mybtn=document.querySelector(".btn");
+let mybtn=document.querySelector(".btn1");
 let inputfield=document.querySelector("#inputbox");
 
 //let createdbtn=document.querySelector(".btn2");
 
-let addelement=document.querySelector(".addingelem");
+let addelement=document.querySelector(".addingelement");
+let Deletebtn=document.querySelector(".delbtn");
 
 const handlebutton=()=>{
     addtodolist();
-
-
 };
+
+
+
+
+const gettodolistfromlocal=()=>{
+    return JSON.parse(localStorage.getItem("Youtubeplaylist"));
+}
+
+
+
+   elementarray=gettodolistfromlocal()||[];
+
 
 
 
 const addtodolist=()=>{
-    let para=document.createElement("p");
-para.textContent=inputfield.value;
+    const todolistvalue=inputfield.value.trim();
+    
 
-addelement.append(para);
+    let divelement=document.createElement('div');
+    divelement.classList.add(".divtodoelement");
+    divelement.innerHTML=`<li>${inputfield.value}</li>
+    <button class="delbtn">Delete</button>`;
 
-inputfield.value=" ";
+    elementarray.push(todolistvalue);
+    localStorage.setItem("Youtubeplaylist",JSON.stringify(elementarray));
+    elementarray=[...new Set(elementarray)];
+    console.log(elementarray);
+
+
+// JSON.parse(localStorage.getItem("Youtubeplaylist"));
+
+addelement.append(divelement);
+inputfield.value="";
+
+
 
 };
+
+
+
+
+
+
+
+const showtodolist=()=>{
+
+    console.log(elementarray);
+}
+showtodolist();
 
 mybtn.addEventListener('click',handlebutton);
 
 
 
-addelement.addEventListener('click',(event)=>{
-    console.log(event.target);
-    let curelement=event.target;
-   curelement.remove();
-})
-
-
-
-
-// let mybtn=document.querySelector(".btn");
-// let inputfield=document.querySelector("#inputbox");
-// // ❌ remove this global para creation
-// // let para=document.createElement("p");
-
-// let addelement=document.querySelector(".addingelem");
-
-// const handlebutton=()=>{
-//     addtodolist();
-// };
-
-// const addtodolist=()=>{
-//     // ✅ create a new <p> each time
-//     let para=document.createElement("p");
-//     para.textContent=inputfield.value;
-//     addelement.append(para);
-//     inputfield.value=" ";
-// };
-
-// mybtn.addEventListener('click',handlebutton);
-
-// addelement.addEventListener('click',(event)=>{
+// Deletebtn.addEventListener('click',(event)=>{
 //     console.log(event.target);
 //     let curelement=event.target;
-//     curelement.remove();
-// });
+//    curelement.remove();
+// })
+
+
