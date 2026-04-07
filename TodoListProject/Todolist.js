@@ -5,6 +5,7 @@ let inputfield=document.querySelector("#inputbox");
 
 let addelement=document.querySelector(".addingelement");
 let Deletebtn=document.querySelector(".delbtn");
+// let maintodoelement=document.querySelector(".divtodoelement");
 
 const handlebutton=()=>{
     addtodolist();
@@ -17,21 +18,39 @@ const gettodolistfromlocal=()=>{
     return JSON.parse(localStorage.getItem("Youtubeplaylist"));
 }
 
+const addtodolistlocalstorage=(elementarray=>{
+return localStorage.setItem("YoutubeList",JSON.stringify(elementarray));
+});
 
 
-   elementarray=gettodolistfromlocal()||[];
+
+  let  elementarray=gettodolistfromlocal()||[];
+   const addtododynamiclist=(element)=>{
+    // addtodolist(element);
+    
+    let divelement=document.createElement('div');
+    divelement.classList.add(".divtodoelement");
+    divelement.innerHTML=`<li>${element}</li>
+    <button class="delbtn">Delete</button>`;
+    
+addelement.append(divelement);
+
+   }
 
 
 
 
 const addtodolist=()=>{
-    const todolistvalue=inputfield.value.trim();
-    
+   
 
-    let divelement=document.createElement('div');
-    divelement.classList.add(".divtodoelement");
-    divelement.innerHTML=`<li>${inputfield.value}</li>
-    <button class="delbtn">Delete</button>`;
+    const todolistvalue=inputfield.value.trim();
+    if(!todolistvalue=="" && !elementarray.includes(todolistvalue)){
+    addtododynamiclist(todolistvalue);
+
+    // let divelement=document.createElement('div');
+    // divelement.classList.add(".divtodoelement");
+    // divelement.innerHTML=`<li>${inputfield.value}</li>
+    // <button class="delbtn">Delete</button>`;
 
     elementarray.push(todolistvalue);
     localStorage.setItem("Youtubeplaylist",JSON.stringify(elementarray));
@@ -39,12 +58,13 @@ const addtodolist=()=>{
     console.log(elementarray);
 
 
+
 // JSON.parse(localStorage.getItem("Youtubeplaylist"));
 
-addelement.append(divelement);
+// addelement.append(divelement);
 inputfield.value="";
 
-
+    }
 
 };
 
@@ -57,6 +77,10 @@ inputfield.value="";
 const showtodolist=()=>{
 
     console.log(elementarray);
+   elementarray.forEach(element => {
+        addtododynamiclist(element);
+        
+    });
 }
 showtodolist();
 
@@ -64,10 +88,33 @@ mybtn.addEventListener('click',handlebutton);
 
 
 
-// Deletebtn.addEventListener('click',(event)=>{
-//     console.log(event.target);
-//     let curelement=event.target;
-//    curelement.remove();
-// })
 
+//delete the data 
+addelement.addEventListener('click',(e)=>{
+    e.preventDefault();
+    if(e.target.classList.contains("delbtn")){
+
+    
+    removetodoelement(e);}
+});
+
+
+
+const removetodoelement=(e)=>{
+    const removetodoele=e.target;
+    let deletetodoelementcontent=removetodoele.previousElementSibling.innerText;
+   
+    let parentelement=removetodoele.parentElement;
+     console.log(deletetodoelementcontent);
+    parentelement.remove();
+    
+
+    elementarray=elementarray.filter((currenttodo)=>{
+
+return currenttodo!=deletetodoelementcontent.toLowerCase();
+    })
+console.log(elementarray);
+addtodolistlocalstorage(elementarray);
+
+}
 
