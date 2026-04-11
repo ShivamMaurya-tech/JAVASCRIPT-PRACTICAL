@@ -28,14 +28,51 @@
 // console.log(times);
 
 // Q-write a function to add a specified number of days to given date
-const date=new Date("2026-04-09");
-console.log(date)
+//  const adddaysdate=(date,extraday)=>{
+//         // console.log(date);
+//         // console.log(date.getDate());
+//        // console.log(date.setDate(date.getDate()+extraday));
+//        // console.log(new Date(1776297600000));
+//        // console.log(date.setDate(20));
+//        // console.log(new Date(1776643200000));
+//        let updated=date.setDate(date.getDate()+extraday);
+//        updated=new Date(updated);
+//         return updated;
 
-const numberdays=(date,7)=>{
 
-    console.log(numberdays.toLocaleString)
+//     };
+
+
+
+
+// const date=new Date("2026-04-09");
+// // console.log(date)
+
+// const numberdays=adddaysdate(date,7);
+// console.log(new Date(numberdays));
+// // console.log(numberdays.toLocaleDateString());
+// console.log(numberdays.toLocaleDateString());
+   
+
+// Question-write a function to calculate the difference in days between two given dates.
+
+const diff=(a,b)=>{
+    let oneday=24*60*60*1000;//hrs,min,sec and millisecond
+    let c=Math.abs(a-b);
+    return (c/oneday);
+
+}
+
+
+
+
+
+const date1=new Date("2026-04-11")
+
+const date2=new Date("2026-04-20")
+const difference=diff(date1,date2);
+console.log(difference);
 
 
     
 
-}
