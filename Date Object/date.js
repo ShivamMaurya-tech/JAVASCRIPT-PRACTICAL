@@ -56,22 +56,35 @@
 
 // Question-write a function to calculate the difference in days between two given dates.
 
-const diff=(a,b)=>{
-    let oneday=24*60*60*1000;//hrs,min,sec and millisecond
-    let c=Math.abs(a-b);
-    return (c/oneday);
+// const diff=(a,b)=>{
+//     let oneday=24*60*60*1000;//hrs,min,sec and millisecond
+//     let c=Math.abs(a-b);
+//     return (c/oneday);
 
-}
-
-
+// }
 
 
 
-const date1=new Date("2026-04-11")
 
-const date2=new Date("2026-04-20")
-const difference=diff(date1,date2);
-console.log(difference);
+
+// const date1=new Date("2026-04-11")
+
+// const date2=new Date("2026-04-20")
+// const difference=diff(date1,date2);
+// // console.log(difference);
+
+
+// -------------------------------------------------->
+
+// const date=new Date();
+// // console.log(date)
+// // console.log(date.getTime())
+// const datestring="2026-04-12T13:59:12.982Z";
+// const milli=Date.parse(datestring); ////parse method use to convert into milli second
+// // console.log(milli);
+// console.log(new Date(milli));
+// // console.log(date.parse())
+// console.log(date.toLocaleDateString(milli))
 
 
     
