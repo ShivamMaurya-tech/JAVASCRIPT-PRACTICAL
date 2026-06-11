@@ -25,6 +25,8 @@ console.log(person["Name"])
 console.log(person[`isstudent`])
 console.log(person.isstudent)
 console.log(person)
+person["Age"]=34
+console.log(person.Age)
 
-person["Age"]=34;
 person.greet()
+
