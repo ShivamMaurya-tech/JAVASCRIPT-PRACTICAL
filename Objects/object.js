@@ -21,6 +21,7 @@ const person ={
 //Methods---> function is having objects and classes called as Methods 
 
 console.log(person.Age)
+console.log(person[`Age`])
 console.log(person["Name"])
 console.log(person[`isstudent`])
 console.log(person.isstudent)
