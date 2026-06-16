@@ -120,7 +120,7 @@
 // indexOf(searchelement,fromIndex)
 // let numbers=[4,2,1,3,78,5,6,7,8,9,9];
 // console.log(numbers.indexOf(4,5)); //output -1
-// // console.log(numbers);
+// console.log(numbers);
 // console.log(numbers.lastIndexOf(4,5)); //output 0
 
 // console.log(numbers.lastIndexOf(4,3));// output 0
@@ -152,8 +152,8 @@
 // Months.splice(updatemarch,2,"March");
 // console.log(Months);
 
-//-------------------------------> 
-// filter in an Array
+//-------------------------------> filter in an Array
+// 
 // 1.find 
 // syntax->array.find(curelement,index,array) just like map method
 

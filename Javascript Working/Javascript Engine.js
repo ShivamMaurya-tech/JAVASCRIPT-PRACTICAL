@@ -99,29 +99,66 @@
 //Local Scope:- It can be defined inside a function and block  Scopes.
 
 
-const globalVariable="I am a global Variable";
-function myfunctionvariable(){
+// const globalVariable="I am a global Variable";
+// function myfunctionvariable(){  //Acts as a Parent 
 
-    //Function  Scope
-   const functionvariable ="I am a function variable";
-    if (true){
-const blockvariable="I am a blockvariable";
-        //Block Scope
-        console.log(
-        blockvariable
-        )
-        console.log(
-        globalVariable
-        )
-        console.log(
-        functionvariable
-        )
+//     //Function  Scope
+//    const functionvariable ="I am a function variable";
+//     if (true){                                         //Act as a Child
+// const blockvariable="I am a blockvariable";
+//         //Block Scope
+//         console.log(
+//         blockvariable
+//         )
+//         console.log(
+//         globalVariable
+//         )
+//         console.log(
+//         functionvariable
+//         )
 
-    }
-
-
+//     }
 
 
-    console.log(blockvariable)
-}
-myfunctionvariable();
+
+
+//     console.log(blockvariable) //Output :- Block Variable is not Defined
+// }
+// myfunctionvariable();
+
+
+
+
+
+
+
+//----------------------------> Closure Scope:- It is created when inner function(Child) access to outer function (parent)
+//even after the outer function has finished executing.
+//1.Example
+// function outerfunction (){                        //Outer function
+//     const OuterVariable=" I Am An Outer  Variable"
+
+//     function innerfunction (){               //Inner Function 
+//         const innervariable="I am a Innervariable"
+//         console.log(OuterVariable)
+    
+//     }
+
+//    return innerfunction;
+
+// }
+// var closureFunction=outerfunction();
+// closureFunction();
+
+
+
+// 2.One More Example
+// function multiplier(factor){
+//     return function (number){
+//         console.log(number,factor);
+//         return number*factor;
+//     };
+// }
+
+// const double=multiplier(2);
+// console.log(double(5));
