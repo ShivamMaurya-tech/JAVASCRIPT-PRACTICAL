@@ -1,0 +1,104 @@
+<!-- //1.==================> Description :- Event Propagtion is the process of
+//  how events Propagate or Travel Through the DOM (Document Object Model) Hierarchy.
+
+
+// 2.In javascript ,there are two Phases Of Event Propagation Named as 
+// A.===>Capturing Phase (Top to down Phase Or Event fires while clicked on the Object)
+// B.===>Bubbling Phase(bottom to Top works or Event Fires Whiile clicked on the object )
+
+// ------------ Target phase:- Clicked on that object known as Target Phase -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="EventPropagation.css">
+</head>
+<body>
+    <section>
+        <div id="outer">
+            Outer DIV
+            <div id="middle">
+
+                Middle DIV
+                <div id="inner">
+
+                      Inner DIV
+
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+    
+</body>
+<script>
+
+
+    
+    const callouter=(event)=>{
+        console.table([{
+        description:("I'm Outer Box"),
+        Target:event.target,
+        currentTarget:event.currentTarget,
+        
+    
+         },
+         ] );
+        }
+    
+    const callmiddle=(event)=>{
+        console.table([{
+        description:("I'm Middle Box"),
+        Target:event.target,
+        currentTarget:event.currentTarget,
+        
+    
+         },
+         ] );
+        }
+    const callinner=(event)=>{
+        console.table([{
+        description:("I'm Inner Box"),
+        Target:event.target,
+        currentTarget:event.currentTarget,
+        
+    
+         },
+         ] );
+         //event.stopPropagation(); [didn't work in it ]
+        }
+
+//document.getElementById('outer').addEventListener('click',callouter);
+
+
+//document.getElementById('middle').addEventListener('click',callmiddle);
+
+//document.getElementById('inner').addEventListener('click',callinner);
+
+
+
+
+
+//Note:===========> Here Is the Bubbling Phase (Bottom to top Approach Works it)
+
+
+
+
+
+
+
+    
+document.getElementById('outer').addEventListener('click',callouter,true);
+
+
+document.getElementById('middle').addEventListener('click',callmiddle,true);
+
+document.getElementById('inner').addEventListener('click',callinner,true);
+ //Note:-------> Here is the capturing Phase(Top to Bottom Appproach)
+
+</script>
+</html>

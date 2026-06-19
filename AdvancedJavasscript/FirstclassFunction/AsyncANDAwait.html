@@ -1,0 +1,61 @@
+
+<!-- //Async AND Await:=========> Async and Await are javascript keywords introduced in ECMAScript 2017(ES8)
+// that make synchronous code look and behaviour more like synchronous code ,making it easier to write ,read and reaason About 
+// about Synchronous Operation(simple Language:-Asynchronous code behaves like synchronous with the help of Async and Await) -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="AsyncANDAwait.css">
+</head>
+<body>
+   <body>
+    <div class="container">
+ <h1>Welcome to the Jokes World</h1>
+   <section class="apibody">
+
+   </section>
+   <button id="fetchjoke">Get Another Joke</button>
+    </div>
+    <script>
+        
+const apibody=document.querySelector(".apibody");
+const apiurl="https://icanhazdadjoke.com/";
+const  fetchdata= async()=>{
+    
+try{
+
+    const res=await fetch(apiurl,{
+        headers:{
+            accept:"application/json",
+        },
+
+    });
+
+
+    const data=await res.json();
+    console.log(data.joke);
+    apibody.innerHTML=data.joke;
+}
+        
+
+
+       catch(error){
+        console.log(error);
+        apibody.innerHTML="An error occurred while fetching the joke. Please try again later.";
+        }
+
+    }
+fetchdata();
+
+
+
+
+document.getElementById('fetchjoke').addEventListener('click',fetchdata);
+    </script>
+</body>
+</html>

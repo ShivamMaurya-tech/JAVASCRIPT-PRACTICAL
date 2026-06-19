@@ -1,0 +1,10 @@
+***********==============================>List of Advanced Javasvript Topics***************************************
+1.===============>      Event Propagation(Event Bubbling anfd Event Capturing)  
+2.-===============>     Higher Order Function
+3.================> Callback Function
+4.================> Closures and Function Currying 
+5.==================> callBack Hell
+6.====================>Fetch API
+7.==================> Promises 
+8.-=================> Async-Await
+9.==================>Error-Handling in JS

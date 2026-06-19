@@ -1,0 +1,64 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokes World - Promise API</title>
+    <link rel="stylesheet" href="Promisesproject.css">
+</head>
+<body>
+    <div class="container">
+ <h1>Welcome to the Jokes World</h1>
+   <section class="apibody">
+
+   </section>
+   <button id="fetchjoke">Get Another Joke</button>
+    </div>
+    <script>
+        
+        const apibody=document.querySelector(".apibody");
+const apiurl="https://icanhazdadjoke.com/";
+
+
+const fetchdata=()=>{
+    fetch(apiurl,{headers:{
+    accept:"application/json",},
+})
+
+.then((res)=>{
+    console.log(res);
+    return res.json();
+
+
+})
+
+.then((data)=>{
+    console.log(data.joke);
+    apibody.innerHTML=data.joke;
+
+})
+
+.catch((error)=>{
+    console.log(error)
+})
+
+}
+fetchdata();
+document.getElementById("fetchjoke").addEventListener("click",fetchdata);
+
+
+
+
+
+
+    </script>
+</body>
+
+</html> 
+
+
+
+
+
+
+

@@ -1,0 +1,68 @@
+<!-- Event Delegation:======> Event Delegation is a concept in javascript where instead of attaching event listeners to individual elements,you attach 
+ a single event listeners to a common ancestors of those elements  -->
+
+
+ <!-- for Example:==> Instead of adding a separate event listeners  to each list item you can use event delegation   -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation Demo</title>
+    <link rel="stylesheet" href="Eventdelegation.css">
+</head>
+<body>
+    <main class="page-shell">
+        <header class="hero">
+            <span class="eyebrow">DOM Advanced</span>
+            <h1>Event Delegation in Action</h1>
+            <p>Click any topic below and watch how one parent listener handles every item.</p>
+        </header>
+
+        <section class="demo-card">
+            <div class="panel list-panel">
+                <h2>Topics</h2>
+                <ul id="mylist" class="topic-list">
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Next.js</li>
+                    <li>HTML / CSS</li>
+                </ul>
+            </div>
+
+            <div class="panel result-panel">
+                <h2>Selected Topic</h2>
+                <p id="listvalue">Click a topic to reveal the selected value.</p>
+            </div>
+        </section>
+    </main>
+<script>
+const getdetailes = (event) => {
+    console.log(event.target)
+    document.getElementById('listvalue').innerHTML = `You clicked: <strong>${event.target.textContent}</strong>`;
+     
+}
+    document.getElementById('mylist').addEventListener('click',getdetailes)
+
+    
+</script>
+
+    
+</body>
+</html>

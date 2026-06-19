@@ -296,3 +296,15 @@
 // return accumulator+curelement;//accumulator//`${accumulator}`;
 // },0);
 // console.log(result);
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="PeriodicTable.css">
+</head>
+<body>
+    <section class="mainbody">
+
+    </section>
+   <script>
+
+
+    
+// Function to create a single element block for the periodic table
+const createPeriodicTable = (symbol, atomicNumber, name) => {   
+    const element = document.createElement('div'); // create a div
+    element.classList.add("element");              // add CSS class for styling
+    element.innerHTML = symbol;                    // display the symbol inside the div
+
+
+
+
+
+    // Add custom data attributes for atomic number and element name
+    element.setAttribute("data-atomic-number", atomicNumber);
+    element.setAttribute("data-element-name", name);
+
+    return element; // return the created element
+};
+
+
+
+
+
+// Function to handle clicks on elements
+const handleElementClick = (event) => {
+    const target = event.target;
+    if (target.classList.contains("element")) { // check if clicked item is an element
+        const atomicNumber = target.getAttribute("data-atomic-number"); // get atomic number
+        const elementName = target.getAttribute("data-element-name");   // get element name
+        alert(`Atomic Number : ${atomicNumber}\nElement Name : ${elementName}`); // show info
+    }
+};
+
+
+
+
+// Function to initialize the periodic table
+function initialisePeriodicTable() {
+    const mainbody = document.querySelector(".mainbody"); // find container div
+
+
+
+
+    // Create 50 dummy elements and add them to the container
+    for (let i = 1; i <= 50; i++) {
+        const element = createPeriodicTable(`Elem${i}`, i, `Element${i}`);
+        mainbody.append(element);
+    }
+
+
+
+    // Add click event listener to the container
+    mainbody.addEventListener('click', handleElementClick);
+}
+
+
+
+
+
+// Call the initialization function to build the table
+initialisePeriodicTable();
+</script>
+
+
+
+</body>
+</html>
+
+            
