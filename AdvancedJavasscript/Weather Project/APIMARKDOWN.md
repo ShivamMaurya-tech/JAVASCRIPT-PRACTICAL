@@ -29,3 +29,34 @@
 ## 7. Handle the city Search
 
 ----- Enable users to quickly find and select cities by typing part of the name.
+
+-----Implement the functionality to allow users to search for weather information of different cities .
+----- Add event listeners to city search input and trigger the weather data fetching function accordingly.
+
+
+
+
+## 8. Add Styling(optional)
+
+---Apply css styling to the weather display elements to improve the visual presentation of weather information .
+
+
+## 9. erroe Handling (Optional)
+
+-----Implement error handling mechanisms to gracefully handle erroes that may occur during the API request or data processing .
+
+
+
+
+## 10. Documentation
+
+-----Document the codebase ,including function descriptions ,variable names and any implement detailes, for better resdibility and maintainablity.
+
+
+
+
+## 11.Deployment
+
+
+
+------Deploy the Application to a web Hosting plateform or server to make it accessible to users over the internet .

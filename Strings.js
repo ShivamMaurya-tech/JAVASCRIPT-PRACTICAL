@@ -103,8 +103,7 @@
 // const result=description.replaceAll("Shivam","Don");
 // console.log(result);
 
-
-// ------------------------> extractin string character
+// ------------------------> extracting string character
 //when using negative value in charAt(-2) there will be no/empty output
 // let text="Hello my Name is Shivam Maurya";
 // const result=text.at(-4);//return value for ngeative index also
@@ -116,22 +115,22 @@
 
 
 // --------------------> Question - Write a program for replace last "Javascript" with the another string
-// let names = "Hello Javascript ,How are you Javascript";
+let names = "Hello Javascript ,How are you Javascript";
 
 // // Find the last occurrence of "Javascript"
 // const lastIndex = names.lastIndexOf("Javascript");
 //  const result ="Javascript".length;
 // console.log(result);//Output-10
-// // if (lastIndex !== -1) {
-// //   // Replace only the last occurrence
-// //   const result =
-// //     names.substring(0, lastIndex) +
-// //     "Shivam" +
-// //     names.substring(lastIndex + "Javascript".length);
+//  if (lastIndex !== -1) {
+//     // Replace only the last occurrence
+//    const result =
+//      names.substring(0, lastIndex) + //===========>takes everything from the start of the string up to the last "Javascript".
+//      "Shivam" +
+//      names.substring(lastIndex + "Javascript".length); //===========>takes everything after the last "Javascript".
 
-// //   console.log(result);
-// // } else {
-// //   console.log("Word not found");
+//    console.log(result);
+//  } else {
+//    console.log("Word not found");
 // }
 
 
@@ -236,13 +235,13 @@
 // console.log(Math.floor(pi));//3
 // console.log(Math.floor(-3.2)); output -(-4) lowest value always
 
-//2.----> Math.abs() method explains that how far from 0(Zero) to that number 
+//2.----> Math.abs() method explains that how far from 0(Zero) to that number and gives only positive integer. 
 // const number=Math.abs(5);
 // console.log(number);//output-5
 // const number1=Math.abs(-2.4);
 // console.log(number1);
 
-// //3.Math.trun() method returns the integer part only
+// //3.Math.trunc() method returns the integer part only
 // const truncate=Math.trunc(0.7);
 // console.log(truncate);
 // const number=Math.trunc(-1.2);

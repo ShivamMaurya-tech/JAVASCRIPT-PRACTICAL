@@ -1,20 +1,20 @@
 // // console.log("welcome to JavaScript");
 
-// // const prompt = require("prompt-sync")();
-// // const name = prompt("What is your name? ");
-// // console.log(`Hello, ${name}!`);
+//  const prompt = require("prompt-sync")();
+//  const name = prompt("What is your name? ");
+//  console.log(`Hello, ${name}!`);
 // // console.log(10+"20");
 // // var myName = "John";
 // // console.log(myName);
 // // console.log(9-"20");
-// // console.log("hello"-"world");
+// console.log("hello"-"world");
 // // console.log(true-true);
-// // if(5==5){
-// //     console.log("true");
-// // }
-// // else{
-// //     console.log("false");
-// // }
+// if(5==5){
+//     console.log("true");
+// }
+// else{
+//     console.log("false");
+// }
 
 
 
@@ -158,13 +158,12 @@
 // }
 
 // // do while statement -->
-// var i=0;
-// console.log(i);
-// while(i<=10){
-//     console.log(i);
+// let i=0;
+// do{
+//     console.log(i)
 //     i++;
 // }
-
+// while(i<=10);
 
 //For statement-->
 // for(var i=0;i<=10;i++){
