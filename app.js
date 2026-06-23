@@ -273,7 +273,7 @@
 //write a program to print pattern--> ?
 
 // const prompt =require("prompt-sync")();
-// var number=parseInt(prompt("enter the number to  print a pattern"));
+// var number=parseInt(prompt("enter the number to  print a pattern:"));
 // for(var i=1;i<=number;i++){
 //     var row="";
 //     for(var j=1;j<=i;j++){
@@ -411,19 +411,19 @@
 
 
 //----> check given string is pallindrome
-function pallindrome(string){
-    let line="";
-for(var i=string.length-1;i>=0;i--){
+// function pallindrome(string){
+//     let line="";
+// for(var i=string.length-1;i>=0;i--){
     
-    line=(line+string.charAt(i));
-}
-console.log(line);
-if(string==line){
-    console.log("string is pallindrome");
-}
-else{
-    console.log("string is not pallindrome");
-}
+//     line=(line+string.charAt(i));
+// }
+// console.log(line);
+// if(string==line){
+//     console.log("string is pallindrome");
+// }
+// else{
+//     console.log("string is not pallindrome");
+// }
 
-}
-pallindrome("madam");
+// }
+// pallindrome("madam");
